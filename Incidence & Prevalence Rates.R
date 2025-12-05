@@ -4,7 +4,7 @@ daily_new_confirmed_covid_19_cases_per_million_people <- read_csv("daily-new-con
 df<-data.frame(daily_new_confirmed_covid_19_cases_per_million_people)
 names(df)[names(df) == "Daily.new.confirmed.cases.of.COVID.19.per.million.people..rolling.7.day.average..right.aligned."] <- "Daily_Cases"
 
-df$Day <- as.Date(df$Day)   # Turning the  date column into date format
+df$Day <- as.Date(df$Day)  
 
 monthly_cases <- df %>%
   mutate(
