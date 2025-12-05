@@ -15,7 +15,6 @@ library(Biostrings)
 library(ggplot2)
 
 meta <- fread("metadata.tsv", sep="\t")
-
 india_meta <- meta %>% filter(grepl("^India", country))
 india_meta <- india_meta %>% filter(date != "")
 india_meta$date <- gsub("-XX", "-15", india_meta$date)
